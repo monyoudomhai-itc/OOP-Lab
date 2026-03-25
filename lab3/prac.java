@@ -60,16 +60,26 @@ public class prac {
         // stus[0]=newStu;
         // stuTotal++;
         //3
-        System.out.println("\tAfter deleted");
-        for (int i = 0;i< stuTotal;i++)
-        {
-            if (stus[i].getStudentInfo().equals("Name : Alice, Age : 22"))
-            {
-                stus[i] =stus[i+1] ;
-                stus[i+1]=stus[i+2];
-                stuTotal--;
-            }
+        // System.out.println("\tAfter deleted");
+        // for (int i = 0;i< stuTotal;i++)
+        // {
+        //     if (stus[i].getStudentInfo().equals("Name : Alice, Age : 22"))
+        //     {
+        //         stus[i] =stus[i+1] ;
+        //         stus[i+1]=stus[i+2];
+        //         stuTotal--;
+        //     }
+        // }
+        //4
+        int index = 2;
+        for (int i = stuTotal - 1; i >= index; i--) {
+            stus[i + 1] = stus[i];
         }
+
+        // insert
+        stus[index] = newStu;
+        stuTotal++;
+        
         
         for (int i = 0; i<stuTotal;i++)
         {
