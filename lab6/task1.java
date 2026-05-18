@@ -65,7 +65,7 @@ class Math extends AbstractMath{
             }
         }
 
-        return count;
+        return count-1;
     }
     @Override
     int decimalToBinary(int decimal) {
@@ -111,8 +111,37 @@ public class task1 {
                     sc.nextLine();
                     System.out.println("output: "+math.reverseNumber(num));
                     break;
-            
+                case 2:
+                    System.out.println("==== Rounded number ====");
+                    System.out.print("Input number: ");
+                    double number = sc.nextDouble();
+                    sc.nextLine();
+                    System.out.println("Output is: "+math.roundedNumber(number));
+                    break;
+                case 3:
+                    System.out.println("==== Count distinct number ====");
+                    int[] array = new int[100];
+                    String ch = "y";
+                    int count = 0;
+                    while(!ch.equals("n")){
+                        System.out.print("input number #"+(count+1)+": ");
+                        array[count] = sc.nextInt();
+                        sc.nextLine();
+                        count++;
+                        System.out.print("Do you want to continue?(y/n) : ");
+                        ch = sc.nextLine();
+                    }
+                    System.out.println("Count distinct number: "+math.countDistinct(array));
+                    break;
+                case 4:
+                    System.out.println("==== Decimal to Binary ====");
+                    System.out.print("Input number: ");
+                    num = sc.nextInt();
+                    sc.nextLine();
+                    System.out.println("Output: "+math.decimalToBinary(num));
+                    break;
                 default:
+                    System.out.println("Invalid choice");
                     break;
             }
         }

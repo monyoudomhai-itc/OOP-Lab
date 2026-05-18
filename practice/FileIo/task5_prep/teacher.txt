@@ -1,0 +1,2 @@
+Bou chana,M,na@gmail.com,PDI,100.0
+Hok  Tin,M,hok@gmail.com,java,1000.0
