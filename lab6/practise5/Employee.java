@@ -33,7 +33,7 @@ public class Employee{
         Employee e = new Employee(1, "John", "Doe", 1000);
         System.out.println("Before: " + e);
         System.out.println("Annual salary: " + e.getAnnualSalary());
-        int newSalary = e.raiseSalary(10); // 10% raise
+        int newSalary = e.raiseSalary(10); 
         System.out.println("After 10% raise, salary = " + newSalary);
         System.out.println("After: " + e);
     }
